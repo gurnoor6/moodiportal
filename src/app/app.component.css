@@ -30,6 +30,25 @@
 	width:100%;
 }
 
+/***********Footer************/
+.footer{
+	margin:8vh auto;
+	/*margin-bottom:3vh;*/
+	text-align:center;
+}
+
+.contactus img{
+	height:5vh;
+	width:5vh;
+}
+
+.contactus{
+	padding: 0 24px;
+}
+
+
+/******************************/
+
 @media screen and (max-width:675px){
 	.logosm{
 		display:none;

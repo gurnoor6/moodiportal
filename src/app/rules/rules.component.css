@@ -9,10 +9,85 @@
 	font-size:78px;
 }
 
+/*********Form Styling************/
+.form-label{
+	font-family: 'Staatliches';
+	color:#402652;
+	font-size:24px;
+}
+
+.form-group input{
+	background-color:#5e1678;
+	opacity:0.2;
+}
+
+#name-input{
+	width:20vw;
+}
+
+#college-input{
+	width:35vw;
+}
+
+#city-input{
+	width:25vw;
+}
+
+#contact-input{
+	width:30vw;
+}
+
+#email-input{
+	width:35vw;
+}
+
+.submit-button{
+	font-family: 'Staatliches';
+	color:#402652;
+	background-color: #ffffff;
+	border-color:#402652;
+}
+
+.submit-button:hover{
+	background-color:#402652;
+	color: #ffffff;
+	transition: 0.2s;
+}
+
+
+
+
+/*********************************/
+
+
 @media screen and (max-width:675px){
 	.section-head{
 		text-align:center;
 		font-size:38px;
 		margin-left: 0;
 	}
+
+/*********Form Styling************/
+	#name-input{
+	width:40vw;
+	}
+
+	#college-input{
+		width:70vw;
+	}
+
+	#city-input{
+		width:50vw;
+	}
+
+	#contact-input{
+		width:60vw;
+	}
+
+	#email-input{
+		width:70vw;
+	}
+
+/*********************************/
+
 }

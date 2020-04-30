@@ -9,6 +9,7 @@ import {rulesDescription,rulesList} from './rules-interface';
 })
 export class RulesComponent implements OnInit {
 
+
   constructor(private route: ActivatedRoute) { }
 
   competitionId;
@@ -23,6 +24,7 @@ export class RulesComponent implements OnInit {
   	this.rulesandregulations = this.competitionRule.rulesandregulations;
   	this.prizes = this.competitionRule.prizes;
   }
+
 
   
 

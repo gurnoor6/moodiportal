@@ -16,8 +16,13 @@
 		<div  *ngFor="let competition of competitionslist" class="col-md-12 col-lg-6 card-div">
 			<div class="row card-row ml-auto">
 				<div class="col-6">
-					<div class="mycard">
-						<img [@slideImg]="competition.state" (click)="imgSlide(competition)" class="card-img-top card-img" src="{{competition.image}}" alt="Card image cap">
+					<div class="image-wrapper">
+							<div class="mycard">
+								<img [@slideImg]="competition.state" (click)="imgSlide(competition)" class="card-img-top card-img" src="{{competition.image}}" alt="Card image cap">
+							</div>
+							<div class="image-label">
+								<h1>{{competition.name | uppercase}}</h1>
+							</div>
 					</div>
 				</div>
 				<div *ngIf="competition.state=='s2'" class="col-6 my-auto">
@@ -31,12 +36,3 @@
 	</div>	
 </div>
 
-<div class="container footer">
-	<footer>
-			<a href="" class="contactus"><img src="assets/midocs/facebook.svg"></a>
-			<a href="" class="contactus"><img src="assets/midocs/instagram.svg"></a>
-			<a href="" class="contactus"><img src="assets/midocs/twitter.svg"></a>
-			<a href="" class="contactus"><img src="assets/midocs/linkedin.svg"></a>
-			<a href="" class="contactus"><img src="assets/midocs/youtube.svg"></a>
-	</footer>
-</div>

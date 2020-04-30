@@ -2,7 +2,11 @@ export interface rulesDescription{
 	id:number;
 	rulesandregulations:string;
 	prizes:string;
+
 }
+
+
+
 
 export const rulesList:rulesDescription[]=[
 {id:1,rulesandregulations:"rules here",prizes:"prizes here"},
