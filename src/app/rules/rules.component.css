@@ -17,8 +17,8 @@
 }
 
 .form-group input{
-	background-color:#5e1678;
-	opacity:0.2;
+	background-color:rgb(94, 22, 120,0.2);
+	color:#402652;
 }
 
 #name-input{
