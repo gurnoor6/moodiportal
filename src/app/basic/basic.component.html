@@ -1,0 +1,69 @@
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light ">
+	  <a class="navbar-brand" href="#"><img src="assets/midocs/logowithmasklayer.svg" class="logo"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active text">
+	        <a class="nav-link underline" href="#">FAQ</a>
+	      </li>
+	      <li class="nav-item text">
+	        <a class="nav-link underline" href="#">Contact Us</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="#"><img src="assets/midocs/milogo.svg" class="logosm"></a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+</div>
+
+<div class="container image">
+	<img src="assets/midocs/longimg.png">
+</div>
+
+<div class="container">
+	<div class="row textbody">
+		<div class="col-sm-12 col-md-6">
+			A core UX principle is that the user should get *instant* feedback about whatever happens in an application. This includes when people are waiting for stuff to load on a website. Going to a site and wait for several seconds (not all live in a first world country with fast internet) can be very confusing because the user is looking at a blank page and isn’t aware of if the page is broken or whether it eventually will load. For this reason, you should always illustrate loading with a loading spinner (or a loading illustration of your choice) to inform the user to…:
+		</div>
+		<div class="col-sm-12 col-md-6">
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<h1 class="section-head">LET'S GET THIS STARTED</h1>
+	<div class="row">
+		<div  *ngFor="let competition of competitionslist" class="col-md-12 col-lg-6 card-div">
+			<div class="row card-row ml-auto">
+				<div class="col-6">
+					<div class="mycard">
+						<img [@slideImg]="competition.state" (click)="imgSlide(competition)" class="card-img-top card-img" src="{{competition.image}}" alt="Card image cap">
+					</div>
+				</div>
+				<div *ngIf="competition.state=='s2'" class="col-6 my-auto">
+					<div class="description-text">
+						{{competition.description}}<br>
+						<a href="{{competition.link}}" class="violet-link">Rules & Registration</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+</div>
+
+<div class="container footer">
+	<footer>
+			<a href="" class="contactus"><img src="assets/midocs/facebook.svg"></a>
+			<a href="" class="contactus"><img src="assets/midocs/instagram.svg"></a>
+			<a href="" class="contactus"><img src="assets/midocs/twitter.svg"></a>
+			<a href="" class="contactus"><img src="assets/midocs/linkedin.svg"></a>
+			<a href="" class="contactus"><img src="assets/midocs/youtube.svg"></a>
+	</footer>
+</div>

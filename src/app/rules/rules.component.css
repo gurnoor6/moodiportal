@@ -1,0 +1,18 @@
+.description-text{
+	font-size: 12px;
+	color:#402652;
+}
+
+.section-head{
+	font-family:'Staatliches';
+	color:#402652;
+	font-size:78px;
+}
+
+@media screen and (max-width:675px){
+	.section-head{
+		text-align:center;
+		font-size:38px;
+		margin-left: 0;
+	}
+}
