@@ -1,2 +1,29 @@
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light ">
+	  <a class="navbar-brand" routerLink=""><img src="assets/midocs/logowithmasklayer.svg" class="logo"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+	  </button>
 
-<app-basic></app-basic>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item active text">
+	        <a class="nav-link underline" href="#">FAQ</a>
+	      </li>
+	      <li class="nav-item text">
+	        <a class="nav-link underline" href="#">Contact Us</a>
+	      </li>
+	      <li class="nav-item">
+	      	<a class="nav-link" href="#"><img src="assets/midocs/milogo.svg" class="logosm"></a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+</div>
+
+<div class="container image">
+	<img src="{{coverimg}}">
+</div>
+
+<!-- <app-basic></app-basic> -->
+<router-outlet></router-outlet>

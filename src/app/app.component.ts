@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {RouterOutlet,Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'miapp2';
+  coverimg ="assets/midocs/longimg.png";
 }

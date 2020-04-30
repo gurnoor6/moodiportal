@@ -1,0 +1,50 @@
+
+.logo{
+	height:10vh;
+	width:20vw;
+}
+
+.logosm{
+	height:10vh;
+	width:20vw;
+	transform:translateX(7vw);
+}
+
+.nav-item.text{
+	transform:translate3d(10vw,3vh,0);
+	font-size:24px;
+}
+
+.nav-link.underline{
+	font-family:'Staatliches';
+	color:#402652 !important;
+	margin:0 10px;
+	padding-bottom:0;
+}
+
+.nav-link.underline:hover{
+	border-bottom:2px solid #4c0a92 ;
+}
+
+.image img{
+	width:100%;
+}
+
+@media screen and (max-width:675px){
+	.logosm{
+		display:none;
+	}
+
+	.nav-item.text{
+		transform: translate3d(0,0,0) ;
+	}
+
+	.nav-link.underline{
+		margin-left:0 !important;
+	}
+
+}
+
+
+
+

@@ -1,11 +1,3 @@
-:root {
-	--violet-colour:#542883;
-
-}
-
-.head{
-	margin-top:5vh;
-}
 
 .logo{
 	height:10vh;
@@ -35,9 +27,6 @@
 }
 
 
-.image img{
-	width:100%;
-}
 
 .textbody{
 	margin:8vh 0;
