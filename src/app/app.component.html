@@ -1,5 +1,5 @@
 <div class="container">
-	<div [@afterRoll]="positionOnPage" class="introPage">
+	<div [@afterRoll]="positionOnPage" class="introPage container">
 		<div class="row">
 			<div class="col-12 d-flex justify-content-center">
 				<div [@roll]="curStateIntroImg" (click)="changeIntroImageState()" (@roll.done)="getBasePage($event)" class="intro-img">
@@ -9,7 +9,7 @@
 		</div>
 	</div>
 
-	<div [@letsGoExit]="'initial'" *ngIf="!showBasePage" class="letsGo" (click)="changeIntroImageState()">
+	<div [@letsGoExit]="'initial'" *ngIf="!showBasePage" class="letsGo container" (click)="changeIntroImageState()">
 		<div  class="row">
 			<div  class="col-12 d-flex justify-content-center">
 				<h1 class="introPageText">Let's Go</h1>
@@ -18,10 +18,10 @@
 	</div>
 </div>
 
-<div [@afterRoll]="basePageState" *ngIf="showBasePage" class="base-page">
-	<div class="container">
+<div [@afterRoll]="basePageState" *ngIf="showBasePage" class="container base-page">
+	<!-- <div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light ">
-		  <!-- <a class="navbar-brand" routerLink=""><img src="assets/midocs/logowithmasklayer.svg" class="logo"></a> -->
+		  <a class="navbar-brand" routerLink=""><img src="assets/midocs/logowithmasklayer.svg" class="logo"></a>
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -38,21 +38,23 @@
 		      	<a class="nav-link" href="#"><img src="assets/midocs/milogo.svg" class="logosm"></a>
 		      </li>
 		    </ul>
-		  </div>
+		 </div>
 		</nav>
-	</div>
+	</div> -->
 
-	<div class="container image">
-		<img src="{{coverimg}}">
-	</div>
-	<router-outlet #outlet="outlet"></router-outlet>
-	<div class="container footer">
-		<footer>
-				<a href="" class="contactus"><img src="assets/midocs/facebook.svg"></a>
-				<a href="" class="contactus"><img src="assets/midocs/instagram.svg"></a>
-				<a href="" class="contactus"><img src="assets/midocs/twitter.svg"></a>
-				<a href="" class="contactus"><img src="assets/midocs/linkedin.svg"></a>
-				<a href="" class="contactus"><img src="assets/midocs/youtube.svg"></a>
-		</footer>
+	<div class="container">
+		<div class="container image">
+			<img src="{{coverimg}}">
+		</div>
+		<router-outlet #outlet="outlet"></router-outlet>
+		<div class="container footer">
+			<footer>
+					<a href="" class="contactus"><img src="assets/midocs/facebook.svg"></a>
+					<a href="" class="contactus"><img src="assets/midocs/instagram.svg"></a>
+					<a href="" class="contactus"><img src="assets/midocs/twitter.svg"></a>
+					<a href="" class="contactus"><img src="assets/midocs/linkedin.svg"></a>
+					<a href="" class="contactus"><img src="assets/midocs/youtube.svg"></a>
+			</footer>
+		</div>
 	</div>
 </div>

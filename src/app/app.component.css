@@ -11,12 +11,23 @@ main{
 .introPage{
 	margin-top: 35vh;
 	position: absolute;
-	margin-left: 29vw;
+	/* margin-left: 29vw; */
 }
 .intro-img{
 	height:120px;
 	width:198.75px;
 	overflow:hidden;
+}
+
+.base-page {
+	padding-top: 110px;
+	/* position: absolute; */
+	align-items: center;
+	width: '100vw';
+}
+
+.description {
+	display: inline-block;
 }
 
 /* .letsGo {

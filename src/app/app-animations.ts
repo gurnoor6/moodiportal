@@ -5,7 +5,8 @@ export const rollIntro = (
 		trigger('roll',[
 	      state('contract',style({
 			width:'198.75px',
-			position: 'absolute'
+			position: 'absolute',
+			cursor: 'pointer'
 	      })),
 
 	      state('expand',style({
@@ -27,7 +28,7 @@ export const afterRoll=(
 	trigger('afterRoll',[
 		state('topLeft',style({
 
-			marginTop:'0',
+			marginTop:'10px',
 			transform:'scale(0.7)',
 			marginBottom:'-15vh',
 		})),
@@ -37,7 +38,11 @@ export const afterRoll=(
 		]),
 
 		transition('*=>show',[
-			style({opacity:'0',transform:'translate3d(1000px,0,0)'}),
+			style({
+				opacity:'0',
+				transform:'translate3d(1000px,0,0)',
+				width: '100%',
+			}),
 			animate('1s 0.25s ease-in')
 
 		]),
@@ -48,12 +53,13 @@ export const letsGo = (
 	trigger('letsGoExit', [
 		state('initial',style({
 			position: 'absolute',
-			marginTop: '45vh',
-			marginLeft: '25vw',
-			display: 'inline-block'
+			marginTop: '50vh',
+			// marginLeft: '26vw',
+			display: 'inline-block',
+			cursor: 'pointer'
 		})),
 		transition(':leave', [
-			animate('1s', style({ opacity:'0', transform:'translateX(-1000px)', position: 'absolute'})),
+			animate('1s 0.2s', style({ opacity:'0', transform:'translateX(-1000px)', position: 'absolute'})),
 		])
 	])
 )
