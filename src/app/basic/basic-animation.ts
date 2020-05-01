@@ -40,11 +40,4 @@ export const toggleText=(
 
 )
 
-// export const navbarUnderline=(
-// 	trigger('hover',[
-// 		transition('*<=>*')
-
-// 	])
-
-// )
 

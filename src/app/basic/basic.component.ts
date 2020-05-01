@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {splitScreen,toggleText} from './basic-animation';
 import{Competition,competitionsList} from './competitioninterface';
-import {Router} from '@angular/router';
+import {Router,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-basic',
@@ -29,6 +29,6 @@ export class BasicComponent implements OnInit {
   description="Ignores any animations that are performed when the user first opens or navigates to this page. The filter narrows what is already there, so it assumes that any HTML elements to be animated already exist in the DOM."
 
   rulesNavigate(comp:Competition){
-    this.router.navigate(['/rules',comp.id]);
+    this.router.navigate(['home/rules',comp.id]);
   }
 }
