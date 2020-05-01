@@ -1,4 +1,4 @@
-<div *ngIf="!showBasePage" class="introPage container">
+<div [@afterRoll]="positionOnPage" class="introPage container">
 	<div class="row">
 		<div class="col-12 d-flex justify-content-center">
 			<div [@roll]="curStateIntroImg" (click)="changeIntroImageState()" (@roll.done)="getBasePage($event)" class="intro-img">
@@ -6,18 +6,21 @@
 			</div>
 		</div>
 	</div>
+</div>
+
+<div @afterRoll *ngIf="!showBasePage" class="container">
 	<div  class="row">
-		<div class="col-12 d-flex justify-content-center">
+		<div  class="col-12 d-flex justify-content-center">
 			<h1 class="introPageText">Let's Go</h1>
 		</div>
 	</div>
 </div>
 
 
-<div @slideLeft *ngIf="showBasePage" class="base-page">
+<div [@afterRoll]="basePageState" *ngIf="showBasePage" class="base-page">
 	<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-light ">
-		  <a class="navbar-brand" routerLink=""><img src="assets/midocs/logowithmasklayer.svg" class="logo"></a>
+		  <!-- <a class="navbar-brand" routerLink=""><img src="assets/midocs/logowithmasklayer.svg" class="logo"></a> -->
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
@@ -41,9 +44,7 @@
 	<div class="container image">
 		<img src="{{coverimg}}">
 	</div>
-
-	<router-outlet></router-outlet>
-
+	<router-outlet #outlet="outlet"></router-outlet>
 	<div class="container footer">
 		<footer>
 				<a href="" class="contactus"><img src="assets/midocs/facebook.svg"></a>
