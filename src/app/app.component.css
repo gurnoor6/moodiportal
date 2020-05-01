@@ -9,13 +9,21 @@ main{
 /*************INTRO*********************/
 
 .introPage{
-	margin-top: 30vh;
+	margin-top: 35vh;
+	position: absolute;
+	margin-left: 29vw;
 }
 .intro-img{
 	height:120px;
 	width:198.75px;
 	overflow:hidden;
 }
+
+/* .letsGo {
+	margin-top: 50vh;
+	position: absolute;
+	margin-left: 40vw;
+} */
 
 #intro-img{
 	height:100%;

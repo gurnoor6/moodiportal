@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {RouterOutlet,Router} from '@angular/router';
-import {rollIntro,afterRoll,fader} from './app-animations';
+import { RouterOutlet, Router } from '@angular/router';
+import { rollIntro, afterRoll, fader, letsGo } from './app-animations';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,8 @@ import {rollIntro,afterRoll,fader} from './app-animations';
   animations:[
   	rollIntro,
     afterRoll,
-    fader
+    fader,
+    letsGo
   ]
 })
 export class AppComponent {
@@ -19,7 +20,7 @@ export class AppComponent {
 
   curStateIntroImg="contract";
   changeIntroImageState(){
-    this.curStateIntroImg= (this.curStateIntroImg=="contract")?"expand":"contract";
+    this.curStateIntroImg= 'expand';
     // this.showBasePage=true;
   }
 

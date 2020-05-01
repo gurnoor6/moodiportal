@@ -1,21 +1,22 @@
-<div [@afterRoll]="positionOnPage" class="introPage container">
-	<div class="row">
-		<div class="col-12 d-flex justify-content-center">
-			<div [@roll]="curStateIntroImg" (click)="changeIntroImageState()" (@roll.done)="getBasePage($event)" class="intro-img">
-				<img id="intro-img" src="assets/midocs/logowithmasklayer.svg">
+<div class="container">
+	<div [@afterRoll]="positionOnPage" class="introPage">
+		<div class="row">
+			<div class="col-12 d-flex justify-content-center">
+				<div [@roll]="curStateIntroImg" (click)="changeIntroImageState()" (@roll.done)="getBasePage($event)" class="intro-img">
+					<img id="intro-img" src="assets/midocs/logowithmasklayer.svg">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div [@letsGoExit]="'initial'" *ngIf="!showBasePage" class="letsGo" (click)="changeIntroImageState()">
+		<div  class="row">
+			<div  class="col-12 d-flex justify-content-center">
+				<h1 class="introPageText">Let's Go</h1>
 			</div>
 		</div>
 	</div>
 </div>
-
-<div @afterRoll *ngIf="!showBasePage" class="container">
-	<div  class="row">
-		<div  class="col-12 d-flex justify-content-center">
-			<h1 class="introPageText">Let's Go</h1>
-		</div>
-	</div>
-</div>
-
 
 <div [@afterRoll]="basePageState" *ngIf="showBasePage" class="base-page">
 	<div class="container">
