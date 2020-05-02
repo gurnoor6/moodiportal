@@ -62,3 +62,20 @@
 		</div>
 	</div>
 </div>
+
+<br><br>
+<div class="container">
+	<h1 class="section-head">Have Questions? Contact us!</h1>
+	<div  class="row">
+		<div  *ngFor="let cg of cgs_list" class="col-sm-12 col-md-6 cgcontact">
+			<div class="mycard">
+				<a href="{{cg.contact}}"><img class="cgimage" src="{{cg.image}}"></a>
+				<br><br>
+				<h2 class="cgname">{{cg.name}}</h2>
+				<p class="cgdescription">{{cg.description}}</p>
+				<hr class="cgseparator">
+			</div>
+		</div>
+	</div>
+
+</div>

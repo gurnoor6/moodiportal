@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {rulesDescription,rulesList} from './rules-interface';
+import {CG, cgs_list} from './cgs-list';
 
 @Component({
   selector: 'app-rules',
@@ -17,7 +18,7 @@ export class RulesComponent implements OnInit {
   competitionRule;
   prizes;
   coverimg;
-
+  cgs_list = cgs_list;
   ngOnInit():void {
   	let id= parseInt(this.route.snapshot.paramMap.get('id'));
   	this.competitionId = id;

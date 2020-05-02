@@ -98,9 +98,52 @@
 }
 
 
+/**************CONTACT US**********/
 
+.mycard{
+	text-align: center;
+}
+
+.cgimage{
+	width:60%;
+	object-fit: cover;
+	border-radius:30px;
+	box-shadow:0 8px 16px 0 grey;
+}
+
+.cgname{
+	color:#272a59;
+}
+
+.cgdescription{
+	font-size:16px;
+}
+
+.cgseparator{
+	width:40%;
+	border:0.5px solid #272a59;
+	margin-bottom:4vh;
+}
+
+.cgcontact:last-child hr{
+	border:none;
+}
+
+@media screen and (min-width:675px){
+	.cgimage:hover{
+		box-shadow:0 16px 32px 0 grey;
+		transform: scale(1.03);
+		transition: 0.3s;
+	}
+
+	.cgseparator{
+		display:none;
+	}
+}
 
 /*********************************/
+
+
 
 
 @media screen and (max-width:675px){
