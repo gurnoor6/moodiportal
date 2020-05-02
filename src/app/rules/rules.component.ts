@@ -16,6 +16,7 @@ export class RulesComponent implements OnInit {
   rulesandregulations;
   competitionRule;
   prizes;
+  coverimg;
 
   ngOnInit():void {
   	let id= parseInt(this.route.snapshot.paramMap.get('id'));
@@ -23,6 +24,10 @@ export class RulesComponent implements OnInit {
   	this.competitionRule = rulesList.find(o=>o.id==id);
   	this.rulesandregulations = this.competitionRule.rulesandregulations;
   	this.prizes = this.competitionRule.prizes;
+    if(window.innerWidth>700)
+      this.coverimg= this.competitionRule.coverimg;
+    else
+      this.coverimg= this.competitionRule.coverimgmobile;
   }
 
 

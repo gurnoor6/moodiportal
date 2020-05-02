@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {splitScreen,toggleText} from './basic-animation';
 import{Competition,competitionsList} from './competitioninterface';
-import {Router,ActivatedRoute} from '@angular/router';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-basic',
@@ -14,10 +14,22 @@ import {Router,ActivatedRoute} from '@angular/router';
 })
 export class BasicComponent implements OnInit {
 
+  coverimg ="assets/midocs/longimg.png";
+
+
   imgstate="s1";
-  constructor(private router:Router) { }
+
+  containerFluid=false;
+  constructor(private router:Router) {
+
+
+  }
 
   ngOnInit(): void {
+    if(window.innerWidth<675){
+      this.containerFluid=true;
+      this.coverimg="assets/midocs/coverimgmobile.png"
+    }
   }
 
   imgSlide(comp:Competition){
@@ -29,6 +41,6 @@ export class BasicComponent implements OnInit {
   description="Ignores any animations that are performed when the user first opens or navigates to this page. The filter narrows what is already there, so it assumes that any HTML elements to be animated already exist in the DOM."
 
   rulesNavigate(comp:Competition){
-    this.router.navigate(['home/rules',comp.id]);
+    this.router.navigate(['/rules',comp.id]);
   }
 }

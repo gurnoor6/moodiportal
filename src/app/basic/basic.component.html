@@ -1,4 +1,7 @@
 
+<div class="image" [class.container]="!containerFluid" [class.container-fluid]="containerFluid">
+	<img src="{{coverimg}}">
+</div>
 
 <div class="container">
 	<div class="row textbody">
@@ -10,7 +13,7 @@
 	</div>
 </div>
 
-<div class="container">
+<div [class.container]="!containerFluid" [class.container-fluid]="containerFluid">
 	<h1 class="section-head">LET'S GET THIS STARTED</h1>
 	<div class="row">
 		<div  *ngFor="let competition of competitionslist" class="col-md-12 col-lg-6 card-div">
@@ -28,7 +31,7 @@
 				<div *ngIf="competition.state=='s2'" class="col-6 my-auto">
 					<div class="description-text">
 						{{competition.description}}<br>
-						<a (click)="rulesNavigate(competition)" class="violet-link">Rules & Registration</a>
+						<button (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link">Rules & Registration</button>
 					</div>
 				</div>
 			</div>

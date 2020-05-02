@@ -1,21 +1,52 @@
 /*************experimental*********************/
-/*main{
+main{
 	position:relative;
 }
-*/
+
+@media screen and (max-width:675px){
+	.base-page{
+		padding:0;
+	}
+
+	.base-page-another-container{
+		padding:0;
+	}
+}
+
 /****************************************/
 
 
 /*************INTRO*********************/
 
 .introPage{
-	margin-top: 30vh;
+	margin-top: 35vh;
+	position: absolute;
+	
+	/*right:1vw;*/
+	/* margin-left: 29vw; */
 }
 .intro-img{
-	height:120px;
-	width:198.75px;
+/*	height:120px;
+	width:198.75px;*/
 	overflow:hidden;
 }
+
+.base-page {
+	padding-top: 165px;
+	/* position: absolute; */
+	align-items: center;
+	width: '100vw';
+}
+
+.description {
+	display: inline-block;
+}
+
+ .letsGo {
+	/*margin-top: 50vh;*/
+	/*position: absolute;*/
+	/*margin-left: 40vw;*/
+} 
 
 #intro-img{
 	height:100%;
@@ -24,9 +55,9 @@
 .introPageText{
 	font-family: 'Staatliches';
 	font-size: 48px;
-	color: #402652;
+	color: #272a59;
 	margin-top:5vh;
-	opacity:0.7;
+	opacity:0.8;
 }
 
 
@@ -60,9 +91,7 @@
 	border-bottom:2px solid #4c0a92 ;
 }
 
-.image img{
-	width:100%;
-}
+
 
 /***********Footer************/
 .footer{
@@ -78,6 +107,45 @@
 
 .contactus{
 	padding: 0 24px;
+}
+.mi-logo{
+	height:10vh;
+	width:10vh;
+	margin-top:5vh;
+}
+
+/******************************/
+
+@media screen and (max-width:675px){
+	.logosm{
+		display:none;
+	}
+
+	.nav-item.text{
+		transform: translate3d(0,0,0) ;
+	}
+
+	.nav-link.underline{
+		margin-left:0 !important;
+	}
+
+	.contactus{
+		padding: 0 2vw;
+	}
+
+	.introPage{
+		right:0.6px;
+	}
+
+	.letsGo {
+	position: absolute;
+	right:0.6px;
+	} 
+
+	.base-page {
+	padding-top: 200px;
+	}
+
 }
 
 

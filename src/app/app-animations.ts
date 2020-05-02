@@ -1,15 +1,27 @@
-import{trigger,transition,animate,style,state,group,query,animateChild} from '@angular/animations';
+import{trigger,transition,animate,style,state,group,query} from '@angular/animations';
+
+let w="198.75px";
+let wE="390px";
+let mT="40px";
+
+if(window.innerWidth<700){
+	w="178.875px";
+	 wE="351px";
+	 mT="60px";
+}
 
 export const rollIntro = (
 
 		trigger('roll',[
 	      state('contract',style({
-			width:'198.75px',
+			width:w,
+			position: 'absolute',
+			cursor: 'pointer'
 	      })),
 
 	      state('expand',style({
-	        width:'390px',
-
+	        width:wE,
+			position: 'absolute',
 	      })),
 
 	      transition('contract<=>expand',[
@@ -25,24 +37,39 @@ export const afterRoll=(
 	trigger('afterRoll',[
 		state('topLeft',style({
 
-			marginTop:'0',
-			transform:'scale(0.7) translateX(-40vw)',
+			marginTop:mT,
+			transform:'scale(0.7)',
 			marginBottom:'-15vh',
 		})),
 
 		transition('center=>topLeft',[
-			animate('0.5s 0.25s')
+			animate('1s ease-out')
 		]),
 
 		transition('*=>show',[
-			style({opacity:'0',transform:'translate3d(1000px,0,0)'}),
-			animate('0.5s 0.75s')
+			style({
+				opacity:'0',
+				transform:'translate3d(1000px,0,0)',
+				width: '100%',
+			}),
+			animate('1s 0.2s ease-out')
 
 		]),
+	])
+)
 
-		transition(':leave',[
-			animate('0.25s',style({opacity:'0',transform:'translateX(-1000px)'})),
-		]),
+export const letsGo = (
+	trigger('letsGoExit', [
+		state('initial',style({
+			position: 'absolute',
+			marginTop: '50vh',
+			// marginLeft: '26vw',
+			display: 'inline-block',
+			cursor: 'pointer'
+		})),
+		transition(':leave', [
+			animate('1s 0.2s ease-out', style({ opacity:'0', transform:'translateX(-1000px)', position: 'absolute'})),
+		])
 	])
 )
 
@@ -50,33 +77,19 @@ export const afterRoll=(
 export const fader=(
 
 	trigger('routeAnimations',[
-		transition('p1<=>p2',[
-				style({ position: 'relative' }),
-      query(':enter, :leave', [
-        style({
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          width: '100%'
-        })
-      ]),
-      query(':enter', [
-        style({ left: '-100%'})
-      ]),
-      query(':leave', animateChild()),
-      group([
-        query(':leave', [
-          animate('300ms ease-out', style({ left: '100%'}))
-        ]),
-        query(':enter', [
-          animate('300ms ease-out', style({ left: '0%'}))
-        ])
-      ]),
-      query(':enter', animateChild()),
-		]),
+		// transition('basicPage=>rulesIdPage',[query(':leave',animate('10s',style({opacity:'0'})))]), 
+		
+
+		transition('basicPage=>rulesPage,basicPage=>rulesIdPage',[style({transform:'translateX(500px)',opacity:'0'}),animate('0.5s ease')]), 	//works!!
+
+		transition('rulesPage=>basicPage,rulesIdPage=>basicPage',[
+			style({transform:'translateX(-500px)',opacity:'0'}),
+			animate('0.5s  ease-out')
+	])
 
 	])
 )
+
 
 
 
