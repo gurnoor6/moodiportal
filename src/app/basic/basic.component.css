@@ -73,16 +73,17 @@
 
 
 
-.card-img:hover{
+/* .card-img:hover{
 	transition: 0.5s;
 	box-shadow: 0 20px 40px 0 grey;
-}
+} */
 
 
 .mycard:hover{
 	
 	transform: scale(1.03);
 	transition: 0.5s;
+	box-shadow: 0 20px 40px 0 grey;
 
 }
 
