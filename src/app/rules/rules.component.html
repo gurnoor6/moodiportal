@@ -25,39 +25,49 @@
 	<h1 class="section-head">REGISTER NOW!</h1>
 	<div class="row">
 		<div class="col-sm-12 col-md-6">
-			<form>
+			<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
 				<div class="form-group">
 					<label class="form-label">Name</label>
-					<input type="text" class="form-control" id="name-input">
+					<input [class.is-invalid]="registrationForm.get('name').invalid && registrationForm.get('name').touched" formControlName="name" type="text" class="form-control" id="name-input">
+					<small [class.d-none]="registrationForm.get('name').valid || registrationForm.get('name').untouched" class="text-danger">Name is required</small>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">College</label>
-					<input type="text" class="form-control" id="college-input">
+					<input [class.is-invalid]="registrationForm.get('college').invalid && registrationForm.get('college').touched" formControlName="college" type="text" class="form-control" id="college-input">
+					<small [class.d-none]="registrationForm.get('college').valid || registrationForm.get('college').untouched" class="text-danger">College is required</small>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">City</label>
-					<input type="text" class="form-control" id="city-input">
+					<input [class.is-invalid]="registrationForm.get('city').invalid && registrationForm.get('city').touched" formControlName="city" type="text" class="form-control" id="city-input">
+					<small [class.d-none]="registrationForm.get('city').valid || registrationForm.get('city').untouched" class="text-danger">City is required</small>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">Contact</label>
-					<input type="text" class="form-control" id="contact-input">
+					<input [class.is-invalid]="registrationForm.get('contact').invalid && registrationForm.get('contact').touched" formControlName="contact" type="text" class="form-control" id="contact-input">
+					<small [class.d-none]="registrationForm.get('contact').valid || registrationForm.get('contact').untouched" class="text-danger">Contact is required</small>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">Email</label>
-					<input type="text" class="form-control" id="email-input">
+					<input [class.is-invalid]="registrationForm.get('email').invalid && registrationForm.get('email').touched" formControlName="email" type="text" class="form-control" id="email-input">
+					<small [class.d-none]="registrationForm.get('email').valid || registrationForm.get('email').untouched" class="text-danger">Email is required</small>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">Id Card</label>
-					<input type="text" class="form-control">
+					<input [class.is-invalid]="registrationForm.get('idcard').invalid && registrationForm.get('idcard').touched"  type="file" class="form-control" id="image-field" (change)="onFileChange($event)">
+					<small [class.d-none]="registrationForm.get('idcard').valid || registrationForm.get('idcard').untouched" class="text-danger">Id Card is required</small>
+				</div>
+				<div class="form-group">
+					<input type="checkbox" class="form-control" name="checkbox" id="checkbox-input">
+					<label for="checkbox" class="form-label" id="checkbox-label">Confirm</label>
 				</div>
 
 				<br>
-				<button class="btn btn-lg btn-primary submit-button"> Submit</button>
+				<button [disabled]="!registrationForm.valid" class="btn btn-lg btn-primary submit-button" type="submit"> Submit</button>
 			</form>
 		</div>
 	</div>

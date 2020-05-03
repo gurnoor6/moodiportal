@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { rollIntro, afterRoll, fader, letsGo } from './app-animations';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
