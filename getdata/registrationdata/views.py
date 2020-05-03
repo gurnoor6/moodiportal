@@ -17,5 +17,6 @@ class RegistrationDataView(viewsets.ModelViewSet):
 		contact = request.data['contact']
 		college = request.data['college']
 		idcard = request.data['idcard']
-		RegistrationData.objects.create(name=name,email=email,city=city,contact=contact,college=college,idcard=idcard)
+		competitionname = request.data['competitionname']
+		RegistrationData.objects.create(name=name,email=email,city=city,contact=contact,college=college,idcard=idcard,competitionname=competitionname)
 		return HttpResponse({'message':'Registered Successfully'},status=200)

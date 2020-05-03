@@ -64,7 +64,11 @@ export class RulesComponent implements OnInit {
 
   }
 
+
+  submitted=false;    //form isn't shown when it is set to true
+  errorOccured=false;
   onSubmit(){
+    
     // const formData = this.registrationForm.value; //this doesn't work
     const formData = new FormData();
     formData.append('name',this.registrationForm.get('name').value);
@@ -73,10 +77,11 @@ export class RulesComponent implements OnInit {
     formData.append('email',this.registrationForm.get('email').value);
     formData.append('contact',this.registrationForm.get('contact').value);
     formData.append('idcard',this.registrationForm.get('idcard').value);
+    formData.append('competitionname',this.name);
     console.log(formData);
     this._registrationService.register(formData).subscribe(
-      response => console.log('success!',response),
-      error=> console.log('error',error)
+      response => {console.log('success!',response);this.submitted=true; },
+      error=> {console.log('error',error);this.errorOccured=true;}
 
     );
   }
