@@ -43,7 +43,7 @@ export const afterRoll=(
 		})),
 
 		transition('center=>topLeft',[
-			animate('1s ease-out')
+			animate('0.45s ease-out')
 		]),
 
 		transition('*=>show',[
