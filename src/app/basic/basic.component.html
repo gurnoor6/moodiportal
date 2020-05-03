@@ -16,7 +16,7 @@
 <div [class.container]="!containerFluid" [class.container-fluid]="containerFluid">
 	<h1 class="section-head">LET'S GET THIS STARTED</h1>
 	<div class="row">
-		<div  *ngFor="let competition of competitionslist" class="col-md-12 col-lg-6 card-div">
+		<div  *ngFor="let competition of competitionslist; let index=index;" class="col-md-12 col-lg-6 card-div">
 			<div class="row card-row ml-auto">
 				<div class="col-6">
 					<div class="image-wrapper">
@@ -31,7 +31,7 @@
 				<div [@displayText] *ngIf="competition.state=='s2'" class="col-6 my-auto">
 					<div class="description-text">
 						{{competition.description}}<br>
-						<button (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link">Rules & Registration</button>
+						<button *ngIf='index===6' (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link">Rules & Registration</button>
 					</div>
 				</div>
 			</div>
