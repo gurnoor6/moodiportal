@@ -19,25 +19,26 @@ When the world comes at a halt, art soars through the roofs. Participate and sho
 </div>
 
 <div [class.container]="!containerFluid" [class.container-fluid]="containerFluid">
+	<br>
 	<h1 class="section-head">LET'S GET THIS STARTED</h1>
+	<br>
 	<div class="row">
 		<div  *ngFor="let competition of competitionslist; let index=index;" class="col-md-12 col-lg-6 card-div">
-			<div class="row card-row ml-auto">
-				<div class="col-6">
+			<div class="row card-row ml-auto card-img-container">
+				<div class="col-6 card-img-inner-container">
 					<div class="image-wrapper">
 							<div class="mycard">
 								<img [@slideImg]="competition.state" (click)="imgSlide(competition)" class="card-img-top card-img" src="{{competition.image}}" alt="Card image cap">
 							</div>
-							<div class="image-label" [class.lower-font-size]="competition.id=='2'">
+							<div class="image-label" >
 								<h4>{{competition.name | uppercase}}</h4>
 							</div>
 					</div>
 				</div>
 				<div [@displayText] *ngIf="competition.state=='s2'" class="col-6 my-auto">
-					<div class="description-text">
-						{{competition.description}}<br>
+					<div class="description-text">{{competition.description}}<br>
 						<button *ngIf="competition.id<=5" (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link">Rules & Registration</button>
-						<button *ngIf="competition.id>5" disabled (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link">Live on May 20!</button>
+						<button disabled *ngIf="competition.id>5"  (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link disabled">Live on May 20!</button>
 					</div>
 				</div>
 			</div>
