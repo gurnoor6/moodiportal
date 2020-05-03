@@ -4,6 +4,7 @@ import {rulesDescription,rulesList} from './rules-interface';
 import {CG, cgs_list} from './cgs-list';
 import {Validators,FormBuilder,FormGroup} from '@angular/forms';
 import{RegistrationService} from '../registration.service';
+import {forbiddenNameValidator} from './form-validators';
 
 @Component({
   selector: 'app-rules',
@@ -37,9 +38,10 @@ export class RulesComponent implements OnInit {
       name:['',Validators.required],
       college:['',Validators.required],
       city:['',Validators.required],
-      contact:['',Validators.required],
-      email:['',Validators.required],
+      contact:['',[Validators.required,forbiddenNameValidator(/^[6-9]\d{9}$/)]],
+      email:['',[Validators.required,forbiddenNameValidator(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
       idcard:['',Validators.required],
+      checkbox:[false,Validators.pattern('true')]
     })
   }
 
@@ -51,7 +53,6 @@ export class RulesComponent implements OnInit {
 
     if(event.target.files.length>0){
       const file= event.target.files[0];
-
       this.registrationForm.get('idcard').setValue(file);
     }
 

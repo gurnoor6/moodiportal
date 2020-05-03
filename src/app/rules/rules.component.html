@@ -47,23 +47,34 @@
 				<div class="form-group">
 					<label class="form-label">Contact</label>
 					<input [class.is-invalid]="registrationForm.get('contact').invalid && registrationForm.get('contact').touched" formControlName="contact" type="text" class="form-control" id="contact-input">
-					<small [class.d-none]="registrationForm.get('contact').valid || registrationForm.get('contact').untouched" class="text-danger">Contact is required</small>
+					<div *ngIf="registrationForm.get('contact').invalid && registrationForm.get('contact').touched">
+						<small *ngIf="registrationForm.get('contact').errors?.required && !registrationForm.get('contact').errors?.forbiddenName" class="text-danger">Contact Number is required</small>
+						<small *ngIf="registrationForm.get('contact').errors?.forbiddenName" class="text-danger">Invalid Contact Number</small>
+					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">Email</label>
 					<input [class.is-invalid]="registrationForm.get('email').invalid && registrationForm.get('email').touched" formControlName="email" type="text" class="form-control" id="email-input">
-					<small [class.d-none]="registrationForm.get('email').valid || registrationForm.get('email').untouched" class="text-danger">Email is required</small>
+					<div *ngIf="registrationForm.get('email').invalid && registrationForm.get('email').touched">
+						<small *ngIf="registrationForm.get('email').errors?.required && !registrationForm.get('email').errors?.forbiddenName" class="text-danger">Email is required</small>
+						<small *ngIf="registrationForm.get('email').errors?.forbiddenName" class="text-danger">Invalid Email Address</small>
+					</div>
 				</div>
 
 				<div class="form-group">
 					<label class="form-label">Id Card</label>
-					<input [class.is-invalid]="registrationForm.get('idcard').invalid && registrationForm.get('idcard').touched"  type="file" class="form-control" id="image-field" (change)="onFileChange($event)">
-					<small [class.d-none]="registrationForm.get('idcard').valid || registrationForm.get('idcard').untouched" class="text-danger">Id Card is required</small>
+					<div class="choose-file">
+						<label class="btn btn-primary submit-button">
+							<input required [class.is-invalid]="registrationForm.get('idcard').invalid && registrationForm.get('idcard').touched"  type="file" class="form-control d-none" id="image-field" (change)="onFileChange($event)" onchange="$('#upload-file-info').html(this.files[0].name)">
+							Choose File
+						</label>
+						<span class='label label-info description-text' id="upload-file-info"></span>
+					</div>
 				</div>
-				<div class="form-group">
-					<input type="checkbox" class="form-control" name="checkbox" id="checkbox-input">
-					<label for="checkbox" class="form-label" id="checkbox-label">Confirm</label>
+				<div class="form-group custom-control custom-checkbox">
+					<input formControlName="checkbox" type="checkbox" class="custom-control-input" name="checkbox" id="checkbox-input" >
+					<label for="checkbox-input" style="font-size:14px" class="custom-control-label description-text" id="checkbox-label">I hereby agree to the terms and Conditions</label>
 				</div>
 
 				<br>
