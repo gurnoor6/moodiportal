@@ -130,7 +130,7 @@
 
 <div class="container">
 	<h1 class="section-head">REGISTER NOW!</h1>
-	<div class="row">
+	<div class="row" *ngIf="!submitted">
 		<div class="col-sm-12 col-md-6">
 			<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data">
 				<div class="form-group">
@@ -187,6 +187,19 @@
 				<br>
 				<button [disabled]="!registrationForm.valid" class="btn btn-lg btn-primary submit-button" type="submit"> Submit</button>
 			</form>
+		</div>
+	</div>
+
+	<div class="row" *ngIf="submitted">
+		<div class="col-sm-12 col-md-6">
+			<p class="description-text" style="font-size: 16px">Thank you for submitting! Your response has been recorded!</p>
+		</div>
+	</div>
+
+	<div class="row" *ngIf="errorOccured && !submitted">
+		<div class="col-sm-12 col-md-6">
+			<br>
+			<p class="description-text text-danger" style="font-size: 16px">We are really sorry we are not able to process any requests right now. We'll be back soon!</p>
 		</div>
 	</div>
 </div>
