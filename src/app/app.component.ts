@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet, Router } from '@angular/router';
 import { rollIntro, afterRoll, fader, letsGo } from './app-animations';
+import { ScrollTopService } from './scrolltop.service';
 
 
 
@@ -16,19 +17,23 @@ import { rollIntro, afterRoll, fader, letsGo } from './app-animations';
   ]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   containerFluid=false;
   introImgWidth="198.75px";
   introImgHeight="120px";
 
-  constructor(){
+  constructor(private scrollTopService: ScrollTopService){
     if(window.innerWidth<700){
       this.containerFluid=true;
       this.introImgWidth="178.875px";
       this.introImgHeight="108px";
     }
 
+  }
+  
+  ngOnInit() {
+    this.scrollTopService.setScrollTop();
   }
 
 

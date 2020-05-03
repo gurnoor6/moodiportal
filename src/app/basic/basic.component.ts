@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {splitScreen,toggleText} from './basic-animation';
 import{Competition,competitionsList} from './competitioninterface';
 import {Router} from '@angular/router';
+import { ScrollTopService } from '../scrolltop.service';
 
 @Component({
   selector: 'app-basic',
@@ -20,12 +21,13 @@ export class BasicComponent implements OnInit {
   imgstate="s1";
 
   containerFluid=false;
-  constructor(private router:Router) {
+  constructor(private router:Router, private scrollTopService: ScrollTopService) {
 
 
   }
 
   ngOnInit(): void {
+    this.scrollTopService.setScrollTop();
     if(window.innerWidth<675){
       this.containerFluid=true;
       this.coverimg="assets/midocs/coverimgmobile.png"

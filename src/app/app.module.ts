@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BasicComponent } from './basic/basic.component';
 import { RulesComponent } from './rules/rules.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ScrollTopService } from './scrolltop.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ScrollTopService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,6 +5,7 @@ import {CG, cgs_list} from './cgs-list';
 import {Validators,FormBuilder,FormGroup} from '@angular/forms';
 import{RegistrationService} from '../registration.service';
 import {forbiddenNameValidator} from './form-validators';
+import { ScrollTopService } from '../scrolltop.service';
 
 @Component({
   selector: 'app-rules',
@@ -14,7 +15,12 @@ import {forbiddenNameValidator} from './form-validators';
 export class RulesComponent implements OnInit {
 
 
-  constructor(private route: ActivatedRoute,private fb:FormBuilder,private _registrationService:RegistrationService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private fb:FormBuilder,
+    private _registrationService:RegistrationService,
+    private scrollTopService: ScrollTopService
+    ) { }
 
   competitionId;
   competition;
@@ -23,6 +29,7 @@ export class RulesComponent implements OnInit {
   registrationForm:FormGroup;
   cgs_list = cgs_list;
   ngOnInit():void {
+    this.scrollTopService.setScrollTop();
   	let id= parseInt(this.route.snapshot.paramMap.get('id'));
   	this.competitionId = id;
     this.competition = rulesList.find(o=>o.id==id);
