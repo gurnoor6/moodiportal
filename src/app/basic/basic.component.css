@@ -74,7 +74,7 @@
 }
 
 .image-label{
-	transform: translate3d(24px,-85px,0);
+	transform: translate3d(24px,-115px,0);
 	margin-bottom:-65px;
 	font-family:'Staatliches';
 	color:white;
@@ -101,6 +101,14 @@
 	font-size: 20px;
 	color:#272a59;
 	text-align: justify;
+}
+
+.description {
+	font-size: 20px;
+	color:#272a59;
+	text-align: justify;
+	margin-top: 25px;
+	margin-bottom: 25px;
 }
 
 .violet-link{

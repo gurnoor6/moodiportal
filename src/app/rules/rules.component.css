@@ -28,6 +28,12 @@
 
 }
 
+.contactus img{
+	height:5vh;
+	width:5vh;
+	margin: 1vh;
+}
+
 .description-text{
 	font-size: 12px;
 	color:#272a59;

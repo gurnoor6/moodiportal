@@ -46,7 +46,7 @@ export class RulesComponent implements OnInit {
       contact:['',[Validators.required,forbiddenNameValidator(/^[6-9]\d{9}$/)]],
       email:['',[Validators.required,forbiddenNameValidator(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)]],
       idcard:['',Validators.required],
-      checkbox:[false,Validators.pattern('true')]
+      // checkbox:[false,Validators.pattern('true')]
     })
   }
 
