@@ -28,7 +28,7 @@
 							</div>
 					</div>
 				</div>
-				<div *ngIf="competition.state=='s2'" class="col-6 my-auto">
+				<div [@displayText] *ngIf="competition.state=='s2'" class="col-6 my-auto">
 					<div class="description-text">
 						{{competition.description}}<br>
 						<button (click)="rulesNavigate(competition)" class="btn btn-primary btn-sm violet-link">Rules & Registration</button>
