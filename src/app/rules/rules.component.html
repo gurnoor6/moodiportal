@@ -3,15 +3,122 @@
 </div>
 
 <div class="container main-body">
-	<h1 class="section-head">RULES AND REGULATIONS</h1>
+	<h2 class="section-head">{{name}} - Rules</h2>
 	<div class="row">
-		<div class="col-sm-12 col-md-6">
-			<p class="description-text">{{rulesandregulations}}</p>
+		<div class="">
+			<div *ngIf="competitionId === 1">
+				<ul>
+					<li><b>Theme</b> - <b>Golden Era of Bollywood</b> - Tracks used should be from the Golden Era of Bollywood (1940s-1970s). </li>
+					<li><b>Styles</b> - All except classical dance.</li>
+					<li><b>Time Limit</b> - 1.5 - 2 mins.</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 2">
+				<ul style="list-style-type:none">
+					<li>
+						<h3> Themes </h3>
+						<ul>
+							<li> <b>My Future Self </b> - Write to your 50-year-old self. </li>
+							<li> <b>My Fav Character</b> - Write to your favorite movie character. </li>
+						</ul>
+					</li>
+					<br>
+					<li>
+						<h3> Rules </h3>
+						<ul>
+							<li> <b>Team Size </b> : Solo </li>
+							<li> Entries can be based on any one of the above themes but must be in English only, and should <b>not be more than 40 words.</b> </li>
+							<li>Your entry must be an entirely new creation.</li>
+							<li>Refrain from using swears and abusive language.</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 3">
+				<ul>
+					<li> <b>Team Size </b> : Solo </li>
+					<li> This competition is for <b>females only.</b></li>
+					<li>Photos must be taken after 6th May, 2020.</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 4">
+				<ul>
+					<li> Use of backing tracks is not allowed. </li>
+					<li> Time Limit: 1.5-2 minutes.</li>
+					<li> Only English and Hindi languages are allowed.</li>
+					<li>Purely classical piece is not allowed.</li>
+					<li>Video must be recorded after 6th May, 2020</li>
+					<li>Editing the video or using any kind of special effects is not allowed.</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 5">
+				<ul>
+					<li> <b>Team Size </b> : Solo </li>
+					<li> <b>Theme </b> : <b>Golden Jubilee</b> - Design a logo celebrating 50th edition of Mood Indigo. </li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h2 class="section-head">SUBMISSION</h2>
+	<div class="row">
+		<div class="">
+			<div *ngIf="competitionId === 1">
+				<ul>
+					<li>Upload video from your own public Instagram account.</li>
+					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the video.</li>
+					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+					<li>Editing the video or using any kind of special effects is not allowed.</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 2">
+				<ul>
+					<li>Write your piece on an image template shared here.</li>
+					<li>To write your lines, upload the above image on Instagram as a story, and use the 'TYPEWRITER' font style. Download this story as an image and use it as your entry.</li>
+					<li>Upload video from your own public Instagram account.</li>
+					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the post.</li>
+					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 3">
+				<ul>
+					<li>Upload atleast 2 photos of yourselves.</li>
+					<li>Photos should have atleast one each of - Full length body shot, Beauty shot.</li>
+					<li>Upload these photos in a single post from your own <b>public</b> Instagram account.</li>
+					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the post.</li>
+					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 4">
+				<ul>
+					<li>Upload video from your own <b>public</b> Instagram account</li>
+					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the video</li>
+					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption</li>
+					<!-- <li>Editing the video or using any kind of special effects is not allowed.</li> -->
+				</ul>
+			</div>
+			<div *ngIf="competitionId === 5">
+				<ul>
+					<li>Upload video from your own <b>public</b> Instagram account.</li>
+					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the post.</li>
+					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+					<li>Mail your work to ujjwal@moodi.org in the .psd, .ai that you have used along with the .jpeg file of the same, with at least 3 stages of work.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<h2 class="section-head">Deadline</h2>
+	<div class="row">
+		<div class="">
+			<div>
+				<ul style="list-style-type:none">
+					<li><h3>20th May 2020, 11:59 PM</h3></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </div>
 
-<div class="container prizes-section">
+<!-- <div class="container prizes-section">
 	<h1 class="section-head">PRIZES & LYP</h1>
 	<div class="row">
 		<div class="col-sm-12 col-md-6">
@@ -19,7 +126,7 @@
 		</div>
 	</div>
 	
-</div>
+</div> -->
 
 <div class="container">
 	<h1 class="section-head">REGISTER NOW!</h1>

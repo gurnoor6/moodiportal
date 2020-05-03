@@ -17,22 +17,20 @@ export class RulesComponent implements OnInit {
   constructor(private route: ActivatedRoute,private fb:FormBuilder,private _registrationService:RegistrationService) { }
 
   competitionId;
-  rulesandregulations;
-  competitionRule;
-  prizes;
+  competition;
   coverimg;
+  name;
   registrationForm:FormGroup;
   cgs_list = cgs_list;
   ngOnInit():void {
   	let id= parseInt(this.route.snapshot.paramMap.get('id'));
   	this.competitionId = id;
-  	this.competitionRule = rulesList.find(o=>o.id==id);
-  	this.rulesandregulations = this.competitionRule.rulesandregulations;
-  	this.prizes = this.competitionRule.prizes;
+    this.competition = rulesList.find(o=>o.id==id);
+    this.name = this.competition.name;
     if(window.innerWidth>700)
-      this.coverimg= this.competitionRule.coverimg;
+      this.coverimg= this.competition.coverimg;
     else
-      this.coverimg= this.competitionRule.coverimgmobile;
+      this.coverimg= this.competition.coverimgmobile;
 
      this.registrationForm = this.fb.group({
       name:['',Validators.required],
