@@ -80,6 +80,10 @@
 	color:white;
 }
 
+.lower-font-size{
+	transform: translate3d(24px,-115px,0);
+	margin-bottom:-110px;
+}
 
 .card-img{
 	box-shadow: 0 5px 10px grey;
@@ -156,6 +160,10 @@
 	.image-label{
 		margin-bottom: -40px;
 		transform: translate3d(16px,-85px,0);
+	}
+
+	.lower-font-size{
+		transform: translate3d(1px,-85px,0);
 	}
 
 	.violet-link.btn-primary{
