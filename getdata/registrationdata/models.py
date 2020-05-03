@@ -8,6 +8,7 @@ class RegistrationData(models.Model):
 	contact = models.CharField(max_length=80)
 	email = models.CharField(max_length=80)
 	idcard = models.ImageField(upload_to='images/')
+	competitionname = models.CharField(max_length=80)
 
 	def __str__(self):
 		return self.name

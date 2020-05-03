@@ -73,6 +73,7 @@ export class RulesComponent implements OnInit {
     formData.append('email',this.registrationForm.get('email').value);
     formData.append('contact',this.registrationForm.get('contact').value);
     formData.append('idcard',this.registrationForm.get('idcard').value);
+    formData.append('competitionname',this.name);
     console.log(formData);
     this._registrationService.register(formData).subscribe(
       response => console.log('success!',response),

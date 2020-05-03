@@ -7,4 +7,4 @@ class RegistrationDataSerializer(serializers.ModelSerializer):
 
 	class Meta:
 		model=RegistrationData
-		fields=('id','name','email','contact','college','city','idcard')
+		fields=('id','name','email','contact','college','city','idcard','competitionname')
