@@ -22,6 +22,7 @@ export class AppComponent implements OnInit {
   containerFluid=false;
   introImgWidth="198.75px";
   introImgHeight="120px";
+  animationcomplete=false;
 
   constructor(private scrollTopService: ScrollTopService){
     if(window.innerWidth<700){
@@ -57,6 +58,7 @@ export class AppComponent implements OnInit {
       this.positionOnPage="topLeft";
       this.basePageState="show";
       this.stateLetsGo="finalLetsGo";
+      this.animationcomplete=true;
 
  	 }
   }
