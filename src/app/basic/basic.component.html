@@ -4,8 +4,8 @@
 </div>
 
 <div class="container">
-	<div>
-		<div class="description">
+	<div class="row">
+		<div class="description col-sm-12 col-md-6">
 			"In the midst of chaos, there is also opportunity."
 Mood Indigo brings forth to you Indoor Indigo, a series of online competitions in various genres to eliminate your boredom and take you to the world of opportunities. 
 
@@ -29,7 +29,7 @@ When the world comes at a halt, art soars through the roofs. Participate and sho
 								<img [@slideImg]="competition.state" (click)="imgSlide(competition)" class="card-img-top card-img" src="{{competition.image}}" alt="Card image cap">
 							</div>
 							<div class="image-label" [class.lower-font-size]="competition.id=='2'">
-								<h1>{{competition.name | uppercase}}</h1>
+								<h2>{{competition.name | uppercase}}</h2>
 							</div>
 					</div>
 				</div>

@@ -35,7 +35,7 @@ main{
 	padding-top: 165px;
 	/* position: absolute; */
 	align-items: center;
-	width: 50vw;
+	width: 65vw;
 }
 
 .description {
@@ -144,7 +144,10 @@ main{
 
 	.base-page {
 	padding-top: 200px;
+	width:100vw;
 	}
+
+
 
 }
 

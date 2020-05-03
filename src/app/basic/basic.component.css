@@ -75,14 +75,14 @@
 
 .image-label{
 	transform: translate3d(24px,-115px,0);
-	margin-bottom:-65px;
+	margin-bottom:-35px;
 	font-family:'Staatliches';
 	color:white;
 }
 
 .lower-font-size{
 	transform: translate3d(24px,-115px,0);
-	margin-bottom:-110px;
+	margin-bottom:-80px;
 }
 
 .card-img{
@@ -102,13 +102,13 @@
 }
 
 .description-text{
-	font-size: 20px;
+	font-size: 16px;
 	color:#272a59;
 	text-align: justify;
 }
 
 .description {
-	font-size: 16px;
+	font-size: 14px;
 	color:#272a59;
 	text-align: justify;
 	margin-top: 25px;
@@ -162,7 +162,7 @@
 		margin-left: 0;
 	}
 
-	.image-label h1{
+	.image-label h2{
 		font-size: 24px;
 	}
 
