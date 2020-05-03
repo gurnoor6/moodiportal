@@ -69,20 +69,20 @@
 
 .mycard img{
 
-	height:45vh;
+	height:35vh;
 	object-fit: cover;
 }
 
 .image-label{
-	transform: translate3d(24px,-115px,0);
-	margin-bottom:-35px;
+	transform: translate3d(24px,-65px,0);
+	margin-bottom:-15px;
 	font-family:'Staatliches';
 	color:white;
 }
 
 .lower-font-size{
-	transform: translate3d(24px,-115px,0);
-	margin-bottom:-80px;
+	transform: translate3d(24px,-65px,0);
+	margin-bottom:-60px;
 }
 
 .card-img{
@@ -162,8 +162,8 @@
 		margin-left: 0;
 	}
 
-	.image-label h2{
-		font-size: 24px;
+	.image-label h4{
+		font-size: 20px;
 	}
 
 	.image-label{
@@ -178,6 +178,7 @@
 	.violet-link.btn-primary{
 		font-size:16px;
 	}
+
 }
 
 
