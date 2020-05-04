@@ -1,5 +1,6 @@
 /****Experimental****/
 
+
 /********************/
 
 /******Cover Image*******/
@@ -7,7 +8,7 @@
 	width:100%;
 }
 
-@media screen and (max-width:675px){
+@media screen and (max-width:450px){
 	.image img{
 		width:100%;
 		height:35vh;
@@ -48,13 +49,8 @@
 	border-bottom:2px solid #4c0a92 ;
 }
 
-
-
-.textbody{
-	margin:8vh 0;
-	font-size: 14px;
+.description, .description-text{
 	font-family:'Lato';
-	color: #272a59;
 }
 
 .card-img-top{
@@ -67,10 +63,27 @@
 	margin:2.5vh auto;
 }
 
+.card-img-container{
+	padding-left:0;
+}
+
+.card-img-inner-container{
+	padding-left:0;
+}
+
+
 .mycard img{
 
-	height:35vh;
+	height:45vh;
 	object-fit: cover;
+}
+
+@media screen and (max-width:675px){
+	.mycard img{
+		height:45vh;
+		object-fit: cover;
+	}
+
 }
 
 .image-label{
@@ -86,8 +99,8 @@
 }
 
 .card-img{
-	box-shadow: 0 5px 10px grey;
-	height:45vh;
+	box-shadow: 0 5px 10px rgba(128,128,128,0.8);
+	height:40vh;
 	object-fit: cover;
 	width:200%;
 }
@@ -99,18 +112,18 @@
 	font-family:'Staatliches';
 	color:#272a59;
 	font-size:78px;
+	margin-bottom: 0px;
 }
 
 .description-text{
 	font-size: 16px;
 	color:#272a59;
-	text-align: justify;
+	line-height:1.1;
 }
 
 .description {
 	font-size: 14px;
 	color:#272a59;
-	text-align: justify;
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
@@ -128,18 +141,22 @@
 
 /******Disable Hover effects on mobile******/
 @media screen and (min-width:675px){
-	.mycard:hover{
-		box-shadow: 0 20px 40px 0 grey;
+	.mycard img:hover{
+		box-shadow: 0 20px 40px 0 rgba(128,128,128,0.8);
 		transform: scale(1.03);
 		transition: 0.5s;
 
 	}
 
-	.violet-link.btn-primary:hover{
+
+	.violet-link.btn-primary:hover:enabled{
 		background-color:#272a59;
 		color:#ffffff;
 		transition:0.4s;
 	}
+
+	
+
 }
 /********************/
 
@@ -171,10 +188,10 @@
 		transform: translate3d(16px,-85px,0);
 	}
 
-	.lower-font-size{
-		transform: translate3d(1px,-85px,0);
+	/*.lower-font-size{
+		transform: translate3d(8px,-85px,0);
 	}
-
+*/
 	.violet-link.btn-primary{
 		font-size:16px;
 	}

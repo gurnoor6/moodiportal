@@ -25,7 +25,7 @@ export const rollIntro = (
 	      })),
 
 	      transition('contract<=>expand',[
-	        animate('1s ease-out')
+	        animate('0.5s ease-out')
 	        ]),
     ])
 
@@ -43,7 +43,7 @@ export const afterRoll=(
 		})),
 
 		transition('center=>topLeft',[
-			animate('1s ease-out')
+			animate('0.45s ease-out')
 		]),
 
 		transition('*=>show',[
@@ -52,7 +52,7 @@ export const afterRoll=(
 				transform:'translate3d(1000px,0,0)',
 				width: '100%',
 			}),
-			animate('1s 0.2s ease-out')
+			animate('0.5s 0.1s ease-out')
 
 		]),
 	])
@@ -68,7 +68,7 @@ export const letsGo = (
 			cursor: 'pointer'
 		})),
 		transition(':leave', [
-			animate('1s 0.2s ease-out', style({ opacity:'0', transform:'translateX(-1000px)', position: 'absolute'})),
+			animate('0.5s 0.1s ease-out', style({ opacity:'0', transform:'translateX(-1000px)', position: 'absolute'})),
 		])
 	])
 )
@@ -84,7 +84,7 @@ export const fader=(
 
 		transition('rulesPage=>basicPage,rulesIdPage=>basicPage',[
 			style({transform:'translateX(-500px)',opacity:'0'}),
-			animate('0.5s  ease-out')
+			animate('0.25s  ease-out')
 	])
 
 	])

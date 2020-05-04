@@ -35,7 +35,7 @@ main{
 	padding-top: 165px;
 	/* position: absolute; */
 	align-items: center;
-	width: 65vw;
+	width: 100vw;
 }
 
 .description {
@@ -95,7 +95,7 @@ main{
 
 /***********Footer************/
 .footer{
-	margin:8vh auto;
+	margin:4vh auto;
 	/*margin-bottom:3vh;*/
 	text-align:center;
 }
@@ -106,7 +106,7 @@ main{
 }
 
 .contactus{
-	padding: 0 24px;
+	padding: 0 12px;
 }
 .mi-logo{
 	height:10vh;
