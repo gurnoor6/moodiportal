@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
 
 export class RegistrationService {
 
-  _url = 'http://localhost:8000/registrationdata/'; 
+  _url = 'https://api2.moodi.org/registrationdata/'; 
   constructor(private _http:HttpClient) { }
 
   register(userData){
