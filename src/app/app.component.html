@@ -3,7 +3,8 @@
 		<div class="row">
 			<div class="col-12 d-flex justify-content-center">
 				<div [@roll]="curStateIntroImg" (click)="changeIntroImageState()" (@roll.done)="getBasePage($event)" class="intro-img" [style.width]="introImgWidth" [style.height]="introImgHeight">
-					<img id="intro-img" src="assets/midocs/logowithmasklayer.svg">
+					<a *ngIf="!animationcomplete"><img id="intro-img" src="assets/midocs/logowithmasklayer.svg"></a>
+					<a *ngIf="animationcomplete" href="http://competitions.moodi.org" ><img id="intro-img" src="assets/midocs/logowithmasklayer.svg"></a>
 				</div>
 			</div>
 		</div>
