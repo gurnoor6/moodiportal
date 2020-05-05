@@ -144,8 +144,7 @@
 	.mycard img:hover{
 		box-shadow: 0 20px 40px 0 rgba(128,128,128,0.8);
 		transform: scale(1.03);
-		transition: 0.5s;
-
+		/* transition: 0.5s; */
 	}
 
 

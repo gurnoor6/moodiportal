@@ -23,7 +23,7 @@ export const toggleText=(
 	trigger('displayText',[
 
 		transition(':enter',[
-			animate('.1s',keyframes([
+			animate('1s',keyframes([
 				style({opacity:'0',offset:'0'}),
 				style({opacity:'1',offset:'1.0'})
 
