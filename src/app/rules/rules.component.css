@@ -61,6 +61,11 @@
 	color:#272a59;
 	font-size:38px;
 }
+h1 {
+	font-family:'Staatliches';
+	color:#272a59;
+	font-size:50px;
+}
 
 .deadline{
 	margin-bottom:-3vh;
@@ -237,6 +242,12 @@
 	.section-head{
 		text-align:center;
 		font-size:38px;
+		margin-left: 0;
+	}
+
+	h1 .section-head {
+		text-align:center;
+		font-size:42px;
 		margin-left: 0;
 	}
 

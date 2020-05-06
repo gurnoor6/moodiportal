@@ -3,7 +3,8 @@
 </div>
 
 <div class="container main-body">
-	<h2 class="section-head">{{name}} - Rules</h2>
+	<h1>{{name}}</h1>
+	<h2 class="section-head">Rules</h2>
 	<div class="row">
 		<div class="">
 			<div *ngIf="competitionId === 1">
@@ -53,9 +54,14 @@
 					<li>Any sort of racist, sexist or offensive slurs will lead to disqualification.</li>
 				</ul>
 			</div>
+			<div *ngIf="competitionId > 5">
+				<ul class="rules-description" style="list-style-type:none" >
+					<li><h3>Rules will be live on 21st May!</h3></li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<h2 class="section-head">SUBMISSION</h2>
+	<h2 *ngIf="competitionId < 6" class="section-head">SUBMISSION</h2>
 	<div class="row">
 		<div>
 			<div *ngIf="competitionId === 1">
@@ -63,6 +69,7 @@
 					<li>Upload video from your own <b>public</b> Instagram account.</li>
 					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the video.</li>
 					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+					<li>Tag 5 of your friends in the post.</li>
 				</ul>
 			</div>
 			<div *ngIf="competitionId === 2">
@@ -72,6 +79,7 @@
 					<li>Upload video from your own <b>public</b> Instagram account.</li>
 					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the post.</li>
 					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+					<li>Tag 5 of your friends in the post.</li>
 				</ul>
 			</div>
 			<div *ngIf="competitionId === 3">
@@ -81,6 +89,7 @@
 					<li>Upload these photos in a single post from your own <b>public</b> Instagram account.</li>
 					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the post.</li>
 					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+					<li>Tag 5 of your friends in the post.</li>
 				</ul>
 			</div>
 			<div *ngIf="competitionId === 4">
@@ -88,7 +97,7 @@
 					<li>Upload video from your own <b>public</b> Instagram account.</li>
 					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the video.</li>
 					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
-					<!-- <li>Editing the video or using any kind of special effects is not allowed.</li> -->
+					<li>Tag 5 of your friends in the post.</li>
 				</ul>
 			</div>
 			<div *ngIf="competitionId === 5">
@@ -96,12 +105,24 @@
 					<li>Upload video from your own <b>public</b> Instagram account.</li>
 					<li>Tag <b>@iitbombay.moodi</b> and <b>@competitions.moodi</b> in the post.</li>
 					<li>The hashtag <b>#indoorindigo</b> is to be used in the caption.</li>
+					<li>Tag 5 of your friends in the post.</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-	<h2 class="section-head">Deadline</h2>
-	<div class="row">
+	<h2 *ngIf="competitionId < 6" class="section-head">Incentives</h2>
+	<div *ngIf="competitionId < 6" class="row">
+		<div class="deadline">
+			<ul class="rules-description" >
+				<li>Winning entries will get featured from the official Insta handle of Competitions at Mood Indigo.</li>
+				<li>Winners will get a dedicated post from the official Insta handle of Mood Indigo.</li>
+				<li>Winners will get a certificate of merit.</li>
+			</ul>
+		</div>
+	</div>
+	<br>
+	<h2 *ngIf="competitionId < 6" class="section-head">Deadline</h2>
+	<div *ngIf="competitionId < 6" class="row">
 		<div class="deadline">
 			<div>
 				<ul class="rules-description" style="list-style-type:none">

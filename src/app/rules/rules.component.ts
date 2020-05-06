@@ -34,10 +34,11 @@ export class RulesComponent implements OnInit {
   	this.competitionId = id;
     this.competition = rulesList.find(o=>o.id==id);
     this.name = this.competition.name;
-    if(window.innerWidth>700)
-      this.coverimg= this.competition.coverimg;
-    else
-      this.coverimg= this.competition.coverimgmobile;
+    this.coverimg= this.competition.coverimg;
+    // if(window.innerWidth>700)
+    //   this.coverimg= this.competition.coverimg;
+    // else
+    //   this.coverimg= this.competition.coverimgmobile;
 
      this.registrationForm = this.fb.group({
       name:['',Validators.required],
