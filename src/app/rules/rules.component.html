@@ -9,7 +9,9 @@
 		<div class="">
 			<div *ngIf="competitionId === 1">
 				<ul class="rules-description">
-					<li><b>Theme</b> - <b>Golden Era of Bollywood</b> - Tracks used should be from the Golden Era of Bollywood (1940s-1970s). </li>
+					<li><b>Theme - Golden Era of Bollywood (1940s-1970s).</b></li>
+					<li><b>Lyrics should be present for atleast 1 minute in your track.</b></li>
+					<li><b>Lyrics used in the track should only be from the songs of the Golden Era of Bollywood(1940s-1970s).</b></li>
 					<li><b>Styles</b> - All styles are allowed</li>
 					<li><b>Time Limit</b> - 2 mins.</li>
 					<li>The video must be recorded after 5th May 2020.</li>
@@ -186,7 +188,7 @@
 				</div>
 
 				<div class="form-group">
-					<label class="form-label">Id Card</label>
+					<label class="form-label">Upload your College Id Card</label>
 					<div class="choose-file">
 						<label class="btn btn-primary submit-button">
 							<input required [class.is-invalid]="registrationForm.get('idcard').invalid && registrationForm.get('idcard').touched"  type="file" class="form-control d-none" id="image-field" (change)="onFileChange($event)" onchange="$('#upload-file-info').html(this.files[0].name)">
